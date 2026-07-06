@@ -1,4 +1,4 @@
-import AddDialog from "@/components/Dialog/Add_dialog";
+import AddDialog from "@/components/dialog/add-dialog";
 import {
   FormControl,
   InputLabel,

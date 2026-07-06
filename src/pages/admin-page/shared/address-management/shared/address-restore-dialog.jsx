@@ -1,4 +1,4 @@
-import RestoreDialog from "@/components/Dialog/Restore_dialog";
+import RestoreDialog from "@/components/dialog/restore-dialog";
 
 const AddressRestoreDialog = ({ open, onClose, onConfirm }) => {
   return (

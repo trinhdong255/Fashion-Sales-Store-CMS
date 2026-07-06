@@ -1,4 +1,4 @@
-import AddDialog from "@/components/Dialog/Add_dialog";
+import AddDialog from "@/components/dialog/add-dialog";
 import { Box, TextField } from "@mui/material";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";

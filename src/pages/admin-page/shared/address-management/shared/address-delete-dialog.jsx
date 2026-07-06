@@ -1,4 +1,4 @@
-import DeleteDialog from "@/components/Dialog/Delete_dialog";
+import DeleteDialog from "@/components/dialog/delete-dialog";
 
 const AddressDeleteDialog = ({ open, onClose, onConfirm }) => {
   return (
