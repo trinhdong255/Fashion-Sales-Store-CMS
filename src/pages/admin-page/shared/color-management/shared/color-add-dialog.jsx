@@ -1,5 +1,5 @@
-import AddDialog from "@/components/Dialog/Add_dialog";
 import { TextField } from "@mui/material";
+import AddDialog from "@/components/dialog/add-dialog";
 
 const ColorAddDialog = ({
   open,

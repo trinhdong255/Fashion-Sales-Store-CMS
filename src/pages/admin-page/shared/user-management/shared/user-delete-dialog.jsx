@@ -1,5 +1,4 @@
-import DeleteDialog from "@/components/Dialog/Delete_dialog";
-
+import DeleteDialog from "@/components/dialog/delete-dialog";
 
 const UserDeleteDialog = ({ open, onClose, onConfirm, title, description }) => {
   return (

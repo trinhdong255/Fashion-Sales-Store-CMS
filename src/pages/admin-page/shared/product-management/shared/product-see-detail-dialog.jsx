@@ -1,5 +1,5 @@
 import { Typography, Box, Chip, Grid } from "@mui/material";
-import SeeDetailDialog from "@/components/Dialog/See_detail_dialog";
+import SeeDetailDialog from "@/components/dialog/see-detail-dialog";
 
 const ProductSeeDetailDialog = ({ open, onClose, product }) => {
   return (

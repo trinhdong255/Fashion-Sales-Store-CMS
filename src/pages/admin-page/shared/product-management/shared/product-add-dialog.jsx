@@ -5,7 +5,7 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
-import AddDialog from "@/components/Dialog/Add_dialog";
+import AddDialog from "@/components/dialog/add-dialog";
 
 const ProductAddDialog = ({
   open,
