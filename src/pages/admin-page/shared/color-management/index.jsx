@@ -8,7 +8,7 @@ import {
   useDeleteColorMutation,
 } from "@/services/api/color";
 import { Add, Delete, Edit, Refresh } from "@mui/icons-material";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import TableData from "@/components/table-data";
 import ColorAddDialog from "./shared/color-add-dialog";
 import ColorEditDialog from "./shared/color-edit-dialog";

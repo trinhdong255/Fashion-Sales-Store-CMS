@@ -9,7 +9,7 @@ import {
   useRestoreBranchesMutation,
 } from "@/services/api/branch";
 import { Add, Delete, Edit, Refresh, Restore } from "@mui/icons-material";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import TableData from "@/components/table-data";
 import StatusChip from "@/components/status-chip";
 import BranchAddDialog from "./shared/branch-add-dialog";

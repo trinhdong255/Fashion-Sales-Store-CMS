@@ -2,7 +2,7 @@ import { useState, Fragment } from "react";
 import { Typography, Button, Box, IconButton } from "@mui/material";
 import DashboardLayoutWrapper from "@/layouts/dashboard-layout";
 import { Add, Delete, Edit, Refresh, Restore } from "@mui/icons-material";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import { PreviewImage } from "@/components/preview-image";
 import TableData from "@/components/table-data";
 import StatusChip from "@/components/status-chip";
