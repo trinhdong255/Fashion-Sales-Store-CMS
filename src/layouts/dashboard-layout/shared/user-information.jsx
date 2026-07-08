@@ -18,7 +18,7 @@ import { useLogoutMutation } from "@/services/api/auth";
 import { clearAuth } from "@/store/redux/auth/reducer";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {

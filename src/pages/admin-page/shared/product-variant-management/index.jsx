@@ -7,7 +7,7 @@ import ProductVariantAddDialog from "./shared/product-variant-add-dialog";
 import ProductVariantDeleteDialog from "./shared/product-variant-delete-dialog";
 import ProductVariantRestoreDialog from "./shared/product-variant-restore-dialog";
 import ProductVariantEditDialog from "./shared/product-variant-edit-dialog";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import StatusChip from "@/components/status-chip";
 import DashboardLayoutWrapper from "@/layouts/dashboard-layout";
 

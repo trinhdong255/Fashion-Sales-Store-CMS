@@ -7,7 +7,7 @@ import {
   useDeleteAddressMutation,
   useRestoreAddressMutation,
 } from "@/services/api/address";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import TableData from "@/components/table-data";
 import StatusChip from "@/components/status-chip";
 import AddressDeleteDialog from "./shared/address-delete-dialog";

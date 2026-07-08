@@ -12,7 +12,7 @@ import TableData from "@/components/table-data";
 import { PreviewImage } from "@/components/preview-image";
 import { Add, Delete, Refresh, Restore } from "@mui/icons-material";
 
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import StatusChip from "@/components/status-chip";
 import { useGetAllRolesByAdminQuery } from "@/services/api/role";
 import UserAddDialog from "./shared/user-add-dialog";

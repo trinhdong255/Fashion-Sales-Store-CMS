@@ -15,7 +15,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useLoginMutation } from "@/services/api/auth";
 import { useLazyGetMyInfoQuery } from "@/services/api/auth";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import { setAuth } from "@/store/redux/auth/reducer";
 import cms from "@/assets/images/cms.png";
 
@@ -67,7 +67,7 @@ const LoginPage = () => {
               accessToken: response?.result?.accessToken,
               email: response?.result?.email,
               roles: response?.result?.roles,
-            })
+            }),
           );
           localStorage.setItem("accessToken", response?.result?.accessToken);
           localStorage.setItem("refreshToken", response?.result?.refreshToken);

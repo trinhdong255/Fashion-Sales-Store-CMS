@@ -10,7 +10,7 @@ import {
 } from "@/services/api/promotion";
 import { Add, Delete, Edit, Refresh, Restore } from "@mui/icons-material";
 import dayjs from "dayjs";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import StatusChip from "@/components/status-chip";
 import TableData from "@/components/table-data";
 import PromotionAddDialog from "./shared/promotion-add-dialog";

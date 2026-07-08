@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 import { AddPhotoAlternate, Delete, Refresh } from "@mui/icons-material";
 import { PreviewImage } from "@/components/preview-image";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import TableData from "@/components/table-data";
 import FileDeleteDialog from "./shared/file-delete-dialog";
 

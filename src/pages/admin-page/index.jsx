@@ -10,7 +10,7 @@ import {
 import { LineChart, BarChart } from "@mui/x-charts";
 import DashboardLayoutWrapper from "@/layouts/dashboard-layout";
 import { GetApp } from "@mui/icons-material";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 
 // Mockup
 import { monthly_revenue } from "@/mocks/monthly-revenue";

@@ -11,7 +11,7 @@ import {
 import { useGetAllCategoriesByAdminQuery } from "@/services/api/category";
 import TableData from "@/components/table-data";
 import { Delete, Edit, Restore, Visibility } from "@mui/icons-material";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import { normalizeSearchString } from "@/utils/stringUtils";
 import StatusChip from "@/components/status-chip";
 

@@ -13,7 +13,7 @@ import DashboardLayoutWrapper from "@/layouts/dashboard-layout";
 import { useListOrdersForAdminQuery } from "@/services/api/order";
 import { Delete, Refresh, Visibility } from "@mui/icons-material";
 import { useDeleteOrderByIdMutation } from "@/services/api/order";
-import { useSnackbar } from "@/components/Snackbar";
+import { useSnackbar } from "@/components/snackbar";
 import TableData from "@/components/table-data";
 import OrderStatusChip from "@/components/order-status-chip";
 
