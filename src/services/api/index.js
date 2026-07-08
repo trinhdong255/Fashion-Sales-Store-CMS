@@ -70,6 +70,8 @@ export const axiosBaseQuery =
         localStorage.removeItem("refreshToken");
         localStorage.removeItem("persist:root");
 
+        window.location.href = "/";
+
         return { error };
       }
 
