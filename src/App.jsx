@@ -36,12 +36,9 @@ const App = () => {
       {/* TODO: Set PrivateRoute if the browser not found token or expired token it will return the page login */}
       <Route element={<PrivateRoute />}>
         <Route path="/admin" element={<AdminLayout />}>
-          <Route
-            index
-            element={<Navigate to="dashboard-management" replace />}
-          />
+          <Route index element={<Navigate to="dashboard" replace />} />
 
-          <Route path="dashboard-management" element={<AdminPage />} />
+          <Route path="dashboard" element={<AdminPage />} />
           <Route path="product-management" element={<ProductManagement />} />
           <Route path="file-management" element={<FileManagement />} />
           <Route
