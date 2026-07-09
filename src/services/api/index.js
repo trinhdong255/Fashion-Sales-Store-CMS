@@ -65,6 +65,8 @@ export const axiosBaseQuery =
           }
         }
 
+        store.dispatch(resetStore());
+
         // Clear all auth data
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import PageNotFound from "./pages/admin-page/page-not-found";
 import { PrivateRoute, PublicRoute } from "./components/protected-route";
 
