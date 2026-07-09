@@ -74,7 +74,7 @@ const LoginPage = () => {
 
           await triggerMyInfo();
           showSnackbar("Đăng nhập thành công!", "success");
-          navigate("/admin/dashboard-management");
+          navigate("/admin/dashboard");
         }
       }
     } catch (error) {

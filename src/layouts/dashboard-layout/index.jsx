@@ -52,47 +52,47 @@ const DashboardLayoutWrapper = ({ children }) => {
   // Single navigation items
   const singleNavigationItems = [
     {
-      path: "/admin/dashboard-management",
+      path: "/admin/dashboard",
       title: "Tổng quan",
       icon: <Dashboard />,
     },
     {
-      path: "/admin/user-management",
+      path: "/admin/user",
       title: "Quản lý người dùng",
       icon: <People />,
     },
     {
-      path: "/admin/order-management",
+      path: "/admin/order",
       title: "Quản lý đơn hàng",
       icon: <Receipt />,
     },
     {
-      path: "/admin/role-management",
+      path: "/admin/role",
       title: "Quản lý vai trò",
       icon: <People />,
     },
     {
-      path: "/admin/payment-history-management",
+      path: "/admin/payment-history",
       title: "Quản lý lịch sử thanh toán",
       icon: <Payment />,
     },
     {
-      path: "/admin/branch-management",
+      path: "/admin/branch",
       title: "Quản lý chi nhánh",
       icon: <Store />,
     },
     {
-      path: "/admin/promotion-management",
+      path: "/admin/promotion",
       title: "Quản lý khuyến mãi",
       icon: <LocalOffer />,
     },
     {
-      path: "/admin/file-management",
+      path: "/admin/file",
       title: "Quản lý file",
       icon: <Image />,
     },
     {
-      path: "/admin/address-management",
+      path: "/admin/address",
       title: "Quản lý địa chỉ",
       icon: <Place />,
     },
@@ -105,23 +105,23 @@ const DashboardLayoutWrapper = ({ children }) => {
       icon: <Inventory />,
       items: [
         {
-          path: "/admin/product-management",
+          path: "/admin/product",
           title: "Quản lý sản phẩm",
           icon: <Checkroom />,
         },
         {
-          path: "/admin/product-variant-management",
+          path: "/admin/product-variant",
           title: "Quản lý biến thể sản phẩm",
           icon: <Tune />,
         },
 
         {
-          path: "/admin/category-management",
+          path: "/admin/category",
           title: "Quản lý danh mục",
           icon: <Category />,
         },
         {
-          path: "/admin/color-management",
+          path: "/admin/color",
           title: "Quản lý màu sắc",
           icon: <Palette />,
         },

@@ -8,9 +8,5 @@ export const PrivateRoute = () => {
 
 export const PublicRoute = () => {
   const isAuthenticated = localStorage.getItem("accessToken");
-  return isAuthenticated ? (
-    <Navigate to="/admin/dashboard-management" />
-  ) : (
-    <Outlet />
-  );
+  return isAuthenticated ? <Navigate to="/admin/dashboard" /> : <Outlet />;
 };

@@ -36,31 +36,25 @@ const App = () => {
       {/* TODO: Set PrivateRoute if the browser not found token or expired token it will return the page login */}
       <Route element={<PrivateRoute />}>
         <Route path="/admin" element={<AdminLayout />}>
-          <Route
-            index
-            element={<Navigate to="dashboard-management" replace />}
-          />
+          <Route index element={<Navigate to="dashboard" replace />} />
 
-          <Route path="dashboard-management" element={<AdminPage />} />
-          <Route path="product-management" element={<ProductManagement />} />
-          <Route path="file-management" element={<FileManagement />} />
+          <Route path="dashboard" element={<AdminPage />} />
+          <Route path="product" element={<ProductManagement />} />
+          <Route path="file" element={<FileManagement />} />
           <Route
-            path="product-variant-management"
+            path="product-variant"
             element={<ProductVariantManagement />}
           />
-          <Route path="color-management" element={<ColorManagement />} />
-          <Route path="address-management" element={<AddressManagement />} />
-          <Route path="category-management" element={<CategoryManagement />} />
-          <Route path="order-management" element={<OrderManagement />} />
-          <Route path="user-management" element={<UserManagement />} />
-          <Route path="branch-management" element={<BranchManagement />} />
+          <Route path="color" element={<ColorManagement />} />
+          <Route path="address" element={<AddressManagement />} />
+          <Route path="category" element={<CategoryManagement />} />
+          <Route path="order" element={<OrderManagement />} />
+          <Route path="user" element={<UserManagement />} />
+          <Route path="branch" element={<BranchManagement />} />
+          <Route path="promotion" element={<PromotionManagement />} />
+          <Route path="role" element={<RoleManagement />} />
           <Route
-            path="promotion-management"
-            element={<PromotionManagement />}
-          />
-          <Route path="role-management" element={<RoleManagement />} />
-          <Route
-            path="payment-history-management"
+            path="payment-history"
             element={<PaymentHistoryManagement />}
           />
         </Route>
