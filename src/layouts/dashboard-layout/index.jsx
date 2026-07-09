@@ -105,23 +105,23 @@ const DashboardLayoutWrapper = ({ children }) => {
       icon: <Inventory />,
       items: [
         {
-          path: "/admin/product-management",
+          path: "/admin/product",
           title: "Quản lý sản phẩm",
           icon: <Checkroom />,
         },
         {
-          path: "/admin/product-variant-management",
+          path: "/admin/product-variant",
           title: "Quản lý biến thể sản phẩm",
           icon: <Tune />,
         },
 
         {
-          path: "/admin/category-management",
+          path: "/admin/category",
           title: "Quản lý danh mục",
           icon: <Category />,
         },
         {
-          path: "/admin/color-management",
+          path: "/admin/color",
           title: "Quản lý màu sắc",
           icon: <Palette />,
         },
