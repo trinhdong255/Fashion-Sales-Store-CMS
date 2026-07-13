@@ -8,6 +8,8 @@ import {
   Box,
   Typography,
   CircularProgress,
+  FormControlLabel,
+  Checkbox,
 } from "@mui/material";
 import { Fragment, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -30,8 +32,16 @@ const LoginPage = () => {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      email: localStorage.getItem("rememberedEmail") || "",
+      password: localStorage.getItem("rememberedPassword") || "",
+      rememberMe: !!localStorage.getItem("rememberedEmail"),
+    },
+  });
+  console.log("watch", watch());
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -72,6 +82,14 @@ const LoginPage = () => {
           localStorage.setItem("accessToken", response?.result?.accessToken);
           localStorage.setItem("refreshToken", response?.result?.refreshToken);
 
+          if (data?.rememberMe) {
+            localStorage.setItem("rememberedEmail", data?.email);
+            localStorage.setItem("rememberedPassword", data?.password);
+          } else {
+            localStorage.removeItem("rememberedEmail");
+            localStorage.removeItem("rememberedPassword");
+          }
+
           await triggerMyInfo();
           showSnackbar("Đăng nhập thành công!", "success");
           navigate("/admin/dashboard");
@@ -80,6 +98,8 @@ const LoginPage = () => {
     } catch (error) {
       if (error && error.data && error.data.message) {
         showSnackbar(`${error.data.message}`, "error");
+      } else {
+        showSnackbar("Đăng nhập thất bại! Vui lòng thử lại sau.", "error");
       }
     }
   };
@@ -87,10 +107,38 @@ const LoginPage = () => {
   return (
     <Fragment>
       <Stack
-        alignItems={"center"}
+        justifyContent="center"
+        alignItems="center"
         sx={{
-          backgroundColor: "var(--color-bg)",
-          height: "100vh",
+          minHeight: "100vh",
+          background: "linear-gradient(135deg, #f3f6fa 0%, #e6eef8 100%)",
+          position: "relative",
+          overflow: "hidden",
+          py: 4,
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            width: "350px",
+            height: "350px",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle, rgba(25, 118, 210, 0.12) 0%, rgba(25, 118, 210, 0) 70%)",
+            top: "10%",
+            left: "15%",
+            zIndex: 0,
+          },
+          "&::after": {
+            content: '""',
+            position: "absolute",
+            width: "450px",
+            height: "450px",
+            borderRadius: "50%",
+            background:
+              "radial-gradient(circle, rgba(118, 75, 162, 0.08) 0%, rgba(118, 75, 162, 0) 70%)",
+            bottom: "10%",
+            right: "15%",
+            zIndex: 0,
+          },
         }}
       >
         <img
@@ -99,20 +147,24 @@ const LoginPage = () => {
           width={100}
           height={100}
           draggable="false"
-          style={{ margin: "30px 0" }}
+          style={{ margin: "20px 0", zIndex: 1, position: "relative" }}
         />
 
         <Box
           sx={{
-            backgroundColor: "white",
+            backgroundColor: "rgba(255, 255, 255, 0.85)",
+            backdropFilter: "blur(16px)",
             width: {
               xs: "90vw",
               sm: 500,
               md: 500,
             },
             height: 600,
-            borderRadius: 2,
-            boxShadow: "0px 4px 30px 5px rgba(0, 0, 0, 0.3)",
+            borderRadius: "16px",
+            border: "1px solid rgba(255, 255, 255, 0.6)",
+            boxShadow: "0px 8px 32px rgba(31, 38, 135, 0.06)",
+            zIndex: 1,
+            position: "relative",
             mb: {
               md: 0,
               sm: 0,
@@ -120,38 +172,17 @@ const LoginPage = () => {
             },
           }}
         >
-          <Box sx={{ p: "40px 40px 0 40px" }}>
-            <Typography
-              variant="h1"
-              align="center"
-              sx={{
-                fontWeight: "500",
-                fontSize: {
-                  md: "2.2rem",
-                  sm: "2.2rem",
-                  xs: "1.8rem",
-                },
-                mt: 4,
-                mb: 4,
-              }}
-            >
+          <Box px={4} py={4}>
+            <Typography variant="h4" align="center" fontWeight={"bold"} my={2}>
               Đăng nhập
             </Typography>
             <Typography
-              variant="h2"
+              variant="h6"
               align="center"
-              sx={{
-                fontWeight: "400",
-                fontSize: {
-                  md: "1.1rem",
-                  sm: "1.1rem",
-                  xs: "1rem",
-                },
-                lineHeight: "1.2rem",
-                color: "var(--color-text-muted)",
-              }}
+              color="#666"
+              fontWeight={400}
             >
-              Chào mừng đến với hệ thống CMS của chúng tôi.
+              Chào mừng đến với hệ thống quản lý cửa hàng của chúng tôi.
             </Typography>
 
             <form onSubmit={handleSubmit(handleLogin)}>
@@ -165,6 +196,7 @@ const LoginPage = () => {
                 <TextField
                   id="email"
                   label="Email"
+                  type=""
                   variant="standard"
                   disabled={isLoginLoading}
                   {...register("email", {
@@ -204,6 +236,8 @@ const LoginPage = () => {
                     endAdornment: (
                       <InputAdornment position="end">
                         <IconButton
+                          color="primary"
+                          sx={{ mr: 1 }}
                           aria-label={
                             showPassword
                               ? "hide the password"
@@ -219,6 +253,22 @@ const LoginPage = () => {
                         </IconButton>
                       </InputAdornment>
                     ),
+                  }}
+                />
+
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      id="rememberMe"
+                      {...register("rememberMe")}
+                      disabled={isLoginLoading}
+                      checked={watch("rememberMe")}
+                    />
+                  }
+                  label="Ghi nhớ tài khoản"
+                  sx={{
+                    mt: 1,
+                    mr: 0,
                   }}
                 />
               </Box>
