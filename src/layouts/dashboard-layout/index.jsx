@@ -21,7 +21,6 @@ import {
   Category,
   Checkroom,
   Dashboard,
-  Height,
   Image,
   LocalOffer,
   Menu,
@@ -33,9 +32,9 @@ import {
   Store,
   Tune,
   ExpandMore,
-  LocationOn,
   Inventory,
 } from "@mui/icons-material";
+import cms from "@/assets/images/cms.png";
 
 import UserInfo from "./shared/user-information";
 
@@ -148,7 +147,7 @@ const DashboardLayoutWrapper = ({ children }) => {
         <Link to="/admin/dashboard" style={{ textDecoration: "none" }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <img
-              src="/src/assets/images/cms.png"
+              src={cms}
               alt="Fashion Store"
               width={40}
               height={40}
