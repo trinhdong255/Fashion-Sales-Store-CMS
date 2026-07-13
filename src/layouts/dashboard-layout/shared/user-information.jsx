@@ -154,21 +154,42 @@ const UserInformation = ({ isMobile = false, drawerWidth }) => {
       <Dialog fullWidth open={openLogoutDialog}>
         <Box sx={{ p: 2 }}>
           <DialogTitle>
-            <Typography align="left" sx={{ fontSize: 24, fontWeight: 600 }}>
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontWeight: "bold",
+                fontSize: {
+                  xs: 22,
+                  sm: 24,
+                  md: 26,
+                },
+              }}
+            >
               Xác nhận đăng xuất
             </Typography>
           </DialogTitle>
           <DialogContent>
-            <Typography>Bạn chắc chắn muốn đăng xuất không ?</Typography>
+            <Typography
+              textAlign={"center"}
+              sx={{
+                color: "text.secondary",
+                fontSize: {
+                  xs: 15,
+                  sm: 17,
+                  md: 19,
+                },
+              }}
+            >
+              Bạn có chắc chắn muốn đăng xuất không?
+            </Typography>
           </DialogContent>
-          <DialogActions sx={{ p: 2 }}>
+          <DialogActions>
             <Button
-              sx={{ mr: 1 }}
               color="error"
               variant="outlined"
               onClick={handleCloseLogoutDialog}
             >
-              Huỷ
+              Quay lại
             </Button>
             <Button variant="contained" onClick={handleLogout}>
               Đăng xuất

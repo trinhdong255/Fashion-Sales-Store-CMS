@@ -58,42 +58,42 @@ const DashboardLayoutWrapper = ({ children }) => {
     },
     {
       path: "/admin/user",
-      title: "Quản lý người dùng",
+      title: "Người dùng",
       icon: <People />,
     },
     {
       path: "/admin/order",
-      title: "Quản lý đơn hàng",
+      title: "Đơn hàng",
       icon: <Receipt />,
     },
     {
       path: "/admin/role",
-      title: "Quản lý vai trò",
+      title: "vai trò",
       icon: <People />,
     },
     {
       path: "/admin/payment-history",
-      title: "Quản lý lịch sử thanh toán",
+      title: "Lịch sử thanh toán",
       icon: <Payment />,
     },
     {
       path: "/admin/branch",
-      title: "Quản lý chi nhánh",
+      title: "Chi nhánh",
       icon: <Store />,
     },
     {
       path: "/admin/promotion",
-      title: "Quản lý khuyến mãi",
+      title: "Khuyến mãi",
       icon: <LocalOffer />,
     },
     {
       path: "/admin/file",
-      title: "Quản lý file",
+      title: "File",
       icon: <Image />,
     },
     {
       path: "/admin/address",
-      title: "Quản lý địa chỉ",
+      title: "Địa chỉ",
       icon: <Place />,
     },
   ];
@@ -106,23 +106,23 @@ const DashboardLayoutWrapper = ({ children }) => {
       items: [
         {
           path: "/admin/product",
-          title: "Quản lý sản phẩm",
+          title: "Sản phẩm",
           icon: <Checkroom />,
         },
         {
           path: "/admin/product-variant",
-          title: "Quản lý biến thể sản phẩm",
+          title: "Biến thể sản phẩm",
           icon: <Tune />,
         },
 
         {
           path: "/admin/category",
-          title: "Quản lý danh mục",
+          title: "Danh mục",
           icon: <Category />,
         },
         {
           path: "/admin/color",
-          title: "Quản lý màu sắc",
+          title: "Màu sắc",
           icon: <Palette />,
         },
       ],
@@ -145,9 +145,23 @@ const DashboardLayoutWrapper = ({ children }) => {
           backgroundColor: "#f8f9fa",
         }}
       >
-        <Typography variant="h6" sx={{ fontWeight: 600, color: "#1976d2" }}>
-          Admin Dashboard
-        </Typography>
+        <Link to="/admin/dashboard" style={{ textDecoration: "none" }}>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <img
+              src="/src/assets/images/cms.png"
+              alt="Fashion Store"
+              width={40}
+              height={40}
+              draggable="false"
+            />
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: "bold", color: "#1976d2" }}
+            >
+              Admin Dashboard
+            </Typography>
+          </Box>
+        </Link>
       </Box>
 
       {/* Navigation */}
