@@ -4,8 +4,11 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Box,
 } from "@mui/material";
 import AddDialog from "@/components/dialog/add-dialog";
+import "react-quill-new/dist/quill.snow.css";
+import ReactQuill from "react-quill-new";
 
 const ProductAddDialog = ({
   open,
@@ -45,7 +48,7 @@ const ProductAddDialog = ({
         }
       />
 
-      <TextField
+      {/* <TextField
         multiline
         label="Mô tả"
         value={product.description}
@@ -61,7 +64,21 @@ const ProductAddDialog = ({
             ? "description không được để trống"
             : ""
         }
-      />
+      /> */}
+
+      <Box mt={2}>
+        <ReactQuill
+          value={product.description}
+          onChange={(value) => setProduct({ ...product, description: value })}
+          required
+          error={submitted && !product.description}
+          helperText={
+            submitted && !product.description
+              ? "description không được để trống"
+              : ""
+          }
+        />
+      </Box>
 
       <FormControl fullWidth sx={{ mt: 2 }} required>
         <InputLabel>Danh mục</InputLabel>

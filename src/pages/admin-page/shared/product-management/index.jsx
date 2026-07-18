@@ -18,7 +18,6 @@ import StatusChip from "@/components/status-chip";
 import ProductAddDialog from "./shared/product-add-dialog";
 import ProductSeeDetailDialog from "./shared/product-see-detail-dialog";
 import ProductRestoreDialog from "./shared/product-restore-dialog";
-import ProductDialogSeeDetail from "./shared/product-see-detail-dialog";
 import ProductEditDialog from "./shared/product-edit-dialog";
 
 import { useGetAllFilesQuery } from "@/services/api/file";
