@@ -10,10 +10,20 @@ const ProductSeeDetailDialog = ({ open, onClose, product }) => {
           <strong>Tên sản phẩm:</strong> {product?.name || "N/A"}
         </Typography>
 
-        {/* Description */}
-        <Typography component={"div"} variant="body1" gutterBottom>
-          <strong>Mô tả:</strong> {product?.description || "Không có mô tả"}
-        </Typography>
+        <Box>
+          <Typography
+            component={"div"}
+            variant="body1"
+            gutterBottom
+            sx={{
+              mb: 1,
+              wordBreak: "break-word",
+              overflowWrap: "anywhere",
+            }}
+          >
+            <div dangerouslySetInnerHTML={{ __html: product?.description }} />
+          </Typography>
+        </Box>
 
         {/* Price */}
         <Typography component={"div"} variant="body1" gutterBottom>
@@ -69,7 +79,6 @@ const ProductSeeDetailDialog = ({ open, onClose, product }) => {
             " Không có màu sắc"
           )}
         </Typography>
-
         {/* Sizes */}
         <Typography component={"div"} variant="body1" gutterBottom>
           <strong>Kích thước:</strong>
@@ -89,7 +98,6 @@ const ProductSeeDetailDialog = ({ open, onClose, product }) => {
             " Không có kích thước"
           )}
         </Typography>
-
         {/* Images */}
         <Typography component={"div"} variant="body1" gutterBottom>
           <strong>Hình ảnh:</strong>

@@ -67,7 +67,7 @@ const DashboardLayoutWrapper = ({ children }) => {
     },
     {
       path: "/admin/role",
-      title: "vai trò",
+      title: "Vai trò",
       icon: <People />,
     },
     {
