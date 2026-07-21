@@ -1,6 +1,5 @@
 import { Typography, Box, Chip, Grid } from "@mui/material";
 import SeeDetailDialog from "@/components/dialog/see-detail-dialog";
-import ReactQuill from "react-quill-new";
 
 const ProductSeeDetailDialog = ({ open, onClose, product }) => {
   return (
